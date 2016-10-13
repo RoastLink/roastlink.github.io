@@ -8,7 +8,7 @@
 <div>
 To add this repository after RancherOS is booted, run:
 <p>
-<code>sudo ros config set rancher.repositories.roast.url https://roastlink.github.io</code>
+<pre>sudo ros config set rancher.repositories.roast.url https://roastlink.github.io</pre>
 </p>
 <p>
 [root@rancher-dev rancher]# ros console list
@@ -21,10 +21,10 @@ disabled ubuntu
 disabled xfce
 </p>
 <p>
-Or, if you're doing development, and starting the QEMU VM using <code>./scripts/run --fresh --cloud-init roast.yml --append "rancher.autologin=ttyS0"</code>, with a `roast.yml` containing:
+Or, if you're doing development, and starting the QEMU VM using <pre>./scripts/run --fresh --cloud-init roast.yml --append "rancher.autologin=ttyS0"</pre>, with a `roast.yml` containing:
 </p>
 <p>
-<code>
+<pre>
 #cloud-config
 ssh_authorized_keys:
   - ssh-rsa AAAAB3N ... wQQ== root@quad
@@ -34,7 +34,7 @@ rancher:
   repositories:
     roast:
       url: https://roastlink.github.io/
-</code>
+</pre>
 </p>
 <p>
 The source for this repository of services can be found at <a href="https://github.com/RoastLink/roastlink.github.io">https://github.com/RoastLink/roastlink.github.io</a>
