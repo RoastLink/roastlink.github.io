@@ -21,6 +21,22 @@ disabled ubuntu
 disabled xfce
 </p>
 <p>
+Or, if you're doing development, and starting the QEMU VM using <code>./scripts/run --fresh --cloud-init roast.yml --append "rancher.autologin=ttyS0"</code>, with a `roast.yml` containing:
+</p>
+<p>
+<code>
+#cloud-config
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3N ... wQQ== root@quad
+rancher:
+  console: alpine
+  autologin: ttyS0
+  repositories:
+    roast:
+      url: https://roastlink.github.io/
+</code>
+</p>
+<p>
 The source for this repository of services can be found at <a href="https://github.com/RoastLink/roastlink.github.io">https://github.com/RoastLink/roastlink.github.io</a>
 </p>
 </div>
