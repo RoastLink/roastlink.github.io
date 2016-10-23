@@ -9,7 +9,7 @@ users:
     primary-group: foobar
     groups: users
 rancher:
-  console: sven
+  console: ubuntu
   password: rancher
   repositories:
     roast:
