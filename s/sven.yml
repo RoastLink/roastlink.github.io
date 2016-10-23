@@ -1,5 +1,5 @@
 sven:
-  image: rancher/os-debianconsole:v0.7.0-rc1${SUFFIX}
+  image: roast/sven
   privileged: false
   labels:
     io.rancher.os.scope: system

@@ -9,7 +9,8 @@ users:
     primary-group: foobar
     groups: users
 rancher:
-  console: alpine
+  console: sven
+  password: rancher
   repositories:
     roast:
       url: https://roastlink.github.io/
