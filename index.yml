@@ -2,3 +2,5 @@ services:
 - sven
 consoles:
 - alpine
+engines:
+- docker-1.12.3
