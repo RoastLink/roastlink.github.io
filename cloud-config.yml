@@ -10,6 +10,8 @@ users:
     groups: users
 rancher:
   console: ubuntu
+  docker:
+    engine: docker-1.12.3
   password: rancher
   repositories:
     roast:
