@@ -1,6 +1,8 @@
 services:
 - sven
 - zfs
+- rancher-server
+- rancher-agent
 consoles:
 - alpine
 engines:

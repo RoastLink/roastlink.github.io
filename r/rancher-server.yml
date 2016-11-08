@@ -1,0 +1,9 @@
+rancher-server:
+  image: rancher/server:master
+  privileged: false
+  labels:
+    io.rancher.os.scope: user
+  restart: unless-stopped
+  ports:
+    - 443:443
+    - 80:8080
