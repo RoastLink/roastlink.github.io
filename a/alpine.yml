@@ -1,6 +1,7 @@
 console:
-  #image: rancher/os-debianconsole:v0.7.0-rc1${SUFFIX}
+  #image: rancher/os-debianconsole:v0.7.0${SUFFIX}
   image: roast/alpineconsole
+  command: ros console-init
   privileged: true
   labels:
     io.rancher.os.scope: system
