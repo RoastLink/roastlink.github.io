@@ -11,3 +11,5 @@ sven:
   volumes_from:
   - command-volumes
   - system-volumes
+  stdin_open: true
+  tty: true
