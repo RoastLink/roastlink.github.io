@@ -3,5 +3,3 @@ services:
 - rancher-server
 - rancher-agent
 - devconsole
-consoles:
-engines:
