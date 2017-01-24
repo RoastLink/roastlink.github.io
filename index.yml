@@ -1,5 +1,4 @@
 services:
+- devconsole
 - sven
 - rancher-server
-- rancher-agent
-- devconsole
