@@ -9,6 +9,8 @@ devconsole:
     io.rancher.os.console: alpine
   volumes_from:
   - all-volumes
+  volumes:
+  - /:/host/root
   restart: always
   pid: host
   ipc: host
