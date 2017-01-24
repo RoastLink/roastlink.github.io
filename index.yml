@@ -1,10 +1,7 @@
 services:
 - sven
-#- zfs
 - rancher-server
 - rancher-agent
 - devconsole
 consoles:
-#- alpine
 engines:
-#- docker-1.12.3
