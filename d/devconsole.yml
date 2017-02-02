@@ -6,7 +6,6 @@ devconsole:
     io.rancher.os.scope: system
     io.rancher.os.after: network
     io.docker.compose.rebuild: "false"
-    io.rancher.os.console: alpine
   volumes_from:
   - all-volumes
   volumes:
