@@ -1,10 +1,16 @@
-# to use the sshd, you need to docker exec into the running service and either copy in an ssh key, or set the root password
+# to use the sshd, you need to:
+# sudo ros config set rancher.repositories.roast.url https://roastlink.github.io
+# sudo ros service enable devconsole
+# sudo ros service up -d devconsole
+# sudo system-docker exec -it devconsole cp -r /host/root/home/rancher/.ssh /root/
+# test by sshing to port 2222
 devconsole:
   image: roast/devconsole
   privileged: true
   labels:
     io.rancher.os.scope: system
     io.rancher.os.after: network
+    io.rancher.os.before: console
     io.docker.compose.rebuild: "false"
   volumes_from:
   - all-volumes
