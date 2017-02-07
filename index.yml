@@ -1,5 +1,6 @@
 services:
 - alpine-vm-tools
 - devconsole
-- sven
 - rancher-server
+- sven
+- vm-guest-tools
