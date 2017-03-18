@@ -1,7 +1,7 @@
 nginx:
   image: nginx
   labels:
-    io.rancher.os.scope: system
+    io.rancher.os.scope: user
     io.docker.compose.rebuild: "false"
   restart: always
   ports:
