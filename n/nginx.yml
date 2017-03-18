@@ -4,5 +4,5 @@ nginx:
     io.rancher.os.scope: system
     io.docker.compose.rebuild: "false"
   restart: always
-  ports
+  ports:
     - "80:80"
