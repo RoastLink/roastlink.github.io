@@ -3,7 +3,7 @@
 # sudo ros service enable devconsole
 # sudo ros service up -d devconsole
 # sudo system-docker exec -it devconsole cp -r /host/root/home/rancher/.ssh /root/
-# test by sshing to port 2222
+# test by sshing to port 2222 to the root account: `ssh -p 2222 root@<host>`
 devconsole:
   image: roast/devconsole
   privileged: true
