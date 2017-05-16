@@ -18,17 +18,40 @@ Installation with a cloud-config.yml will allow you to set the ssh key that you'
 </p>
 <p>
 <pre>
-[root@rancher-dev rancher]# ros console list
-disabled alpine
-disabled centos
-disabled debian
-current  default
-disabled fedora
-disabled ubuntu
-disabled xfce
+$ sudo ros service list 
+disabled amazon-ecs-agent
+disabled crontab
+disabled kernel-extras
+disabled kernel-headers
+disabled kernel-headers-system-docker
+disabled open-vm-tools
+disabled rancher-server
+disabled rancher-server-stable
+disabled zfs
+disabled devconsole
+enabled  docker-compose
+disabled nginx
+disabled sven
 </pre>
 </p>
 <p>
+<h3>Docker-machine, amazonec2 and cloud-config</h3>
+I have a script called <code>amachine</code> that I use to create an amazon vm with cloud-config:
+<p>
+<pre>
+#!/bin/bash
+
+source ~/aws.env
+
+docker-machine create --driver amazonec2 \
+	--amazonec2-ami ami-7caa341c \
+	--amazonec2-region us-west-2 \
+	--amazonec2-instance-type t2.small \
+	--amazonec2-ssh-user rancher \
+	--amazonec2-userdata cloud-config.yml \
+	 $@
+</pre>
+</p>
 <h3>Development run options</h3>
 Or, if you're doing development, and starting the QEMU VM using <code>./scripts/run --fresh --cloud-init roast.yml --append "rancher.autologin=ttyS0"</code>, with a <code>roast.yml</code> containing:
 </p>
