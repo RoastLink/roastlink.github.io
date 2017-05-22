@@ -1,4 +1,5 @@
 services:
+- concourse
 - devconsole
 - docker-compose
 - nginx
