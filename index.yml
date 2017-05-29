@@ -4,3 +4,4 @@ services:
 - docker-compose
 - nginx
 - sven
+- vm-tools
