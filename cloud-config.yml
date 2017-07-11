@@ -7,3 +7,9 @@ rancher:
   repositories:
     roast:
       url: https://roastlink.github.io/
+  bootstrap_docker:
+    registry_mirror: "http://10.10.10.23:5555"
+  docker:
+    registry_mirror: "http://10.10.10.23:5555"
+  system_docker:
+    registry_mirror: "http://10.10.10.23:5555"
