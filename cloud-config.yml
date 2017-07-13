@@ -9,7 +9,16 @@ rancher:
       url: https://roastlink.github.io/
   bootstrap_docker:
     registry_mirror: "http://10.10.10.23:5555"
+    insecure_registry:
+    - 10.10.10.23:5000
+    - arian:5000
   docker:
     registry_mirror: "http://10.10.10.23:5555"
+    insecure_registry:
+    - 10.10.10.23:5000
+    - arian:5000
   system_docker:
     registry_mirror: "http://10.10.10.23:5555"
+    insecure_registry:
+    - 10.10.10.23:5000
+    - arian:5000
