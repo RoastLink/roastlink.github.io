@@ -1,0 +1,25 @@
+# Before running `ros service up pihole`, please set your host's publich IP address
+# ros c set rancher.environment.ServerIP=10.10.10.113
+#
+# To get the admin password, you need to either read the service logs
+#    `ros s logs pihole 2>&1 | grep password`
+# or to set it, you need to
+#    `docker exec -it pihole pihole -a -p`
+pihole:
+  image: diginc/pi-hole:debian
+  container_name: pihole
+  ports:
+  - 53:53/tcp
+  - 53:53/udp
+  - 8053:80/tcp
+  environment:
+  - ServerIP
+  volumes:
+  - /opt/pihole:/etc/pihole
+#    - ./timezone:/etc/timezone:ro
+#    - /etc/localtime:/etc/localtime:ro
+  restart: always
+  log_driver: "json-file"
+  log_opt:
+    max-size: "100k"
+    max-file: "20"
