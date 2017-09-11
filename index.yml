@@ -3,5 +3,6 @@ services:
 - devconsole
 - docker-compose
 - nginx
+- pihole
 - sven
 - vm-tools
