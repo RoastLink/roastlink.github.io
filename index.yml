@@ -2,7 +2,9 @@ services:
 - concourse
 - devconsole
 - docker-compose
+- http-proxy
 - nginx
 - pihole
+- registry-mirror
 - sven
 - vm-tools

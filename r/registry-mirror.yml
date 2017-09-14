@@ -1,0 +1,10 @@
+registry-mirror:
+  image: registry:latest
+  ports:
+    - 5000:5000
+  restart: true
+  environment:
+    STANDALONE: false
+    STORAGE_PATH: /var/lib/registry
+    MIRROR_SOURCE: https://registry-1.docker.io
+    MIRROR_SOURCE_INDEX: https://index.docker.io
