@@ -2,7 +2,7 @@ registry-mirror:
   image: registry:latest
   ports:
     - 5000:5000
-  restart: true
+  restart: always
   environment:
     STANDALONE: false
     STORAGE_PATH: /var/lib/registry
